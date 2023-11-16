@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-image: url(/assets/tr1.jpg);
+}
+
+:root{
+    --blue: brown;
+    --black: #060606; 
+    --white: #fffdfd;
+    --black-color: #666;
+    --white-bg: #eee;
+    --border: 2rem solid rgba(white);
+    --box-shadow: 0 .5rem 1rem rgba(whitesmoke);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color:rgb(14, 14, 14);
+}
+
+html{ 
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+section{
+    padding: 3rem 2rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4rem;
+    padding-top: 5vh;
+}
+
+.header{
+    padding: 2rem;
+    border-bottom: var(--border);
+    background-color: #212529;
+}
+
+.header.active{
+    background-color: var(--blue);
+    box-shadow: var(--border);
+    border: 0;
+}
+
+.header .logo{
+    font-size:2rem;
+    color: var(--white-bg);
+}
+
+.header .logo span{
+    color: var(--blue);
+}
+
+.header .nav a{
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.header .nav a:hover{
+    color: var(--blue);
+}
+
+#menu-btn{
+    font-size:2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+
+.home .row{
+    min-height: 50vh;
+}
+
+.home .content span{
+    font-size: 7rem;
+    color: var(--blue);
+    text-align: center;
+}
+
+.home .content p{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(light-color);
+    line-height: 2;
+}
+
+.about .row{
+    min-height: 50vh;
+}
+
+.about .content span{
+    font-size: 7rem;
+    color: var(--blue);
+}
+
+.about .content h1{
+    font-size: 3rem;
+    color: var(--black);
+    margin-top: 1rem;
+}
+
+.about .content p{
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: var(light-color);
+    line-height: 2;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header .link-btn{
+        display: none;
+    }
+
+    section{
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 768px){
+
+    section{
+        padding: 3rem 2rem;
+    }
+
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+        color: white;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .nav{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: var(--black);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        text-align: center;
+        flex-flow: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .nav.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+   
+    .header .nav a{
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: top;
+    }
+
+    .home .content{
+        width: auto;
+    }
+}
+
+@media (max-width: 400px){
+
+    html{
+        font-size: 25%;
+    }
+
+    .home .content h1{
+        font-size: 5rem;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+}
+
+.container{
+    text-align: center;
+}
+
+  .contact {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5vh;
+  }
+  
+  span {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .box {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .link-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .link-btn:hover {
+    background-color: #0056b3;
+  }
+  .container {
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 10px;
+    font-size: medium;
+}
+
+.col-md-6 {
+    margin-top: 5vh;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.text-center {
+    margin-bottom: 5px; 
+    margin-top: 10px;
+    font-size: x-small;
+  }
